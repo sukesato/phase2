@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phase2</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      
+      <ul>
+        <li><%= link_to 'HOME', root_path %>
+        <li><%= link_to 'Word一覧', words_path %>
+        <li><%= link_to '新規投稿', new_word_path %>
+      </ul>
+    </header>
+  
+  <%= yield %>
+    
+    <footer>
+      <p>運営会社Sato株式会社</p>
+      <p>© 2015-2016 Copyright Sato Corp.</p>
+    </footer>
+    
+  </body>
+</html>
